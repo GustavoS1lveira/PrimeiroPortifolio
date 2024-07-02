@@ -1,0 +1,52 @@
+body{
+  font-family: 'Saeada', cursive;
+}
+
+.container {
+  display: flex;
+}
+
+.text {
+  background-color: orangered;
+  width: 45%;
+  height: 700px;
+  padding: 1px;
+  font-size: 26px;
+}
+
+.image-container {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+#header {
+  text-align: center;
+  color: yellow;
+}
+
+#image_the_scream {
+  max-width: 100%;
+  height: 500px;
+}
+
+.description {
+  margin-top: 20px;
+  font-family: 'Saeada', cursive;
+}
+
+.description p {
+  margin: 5px 0;
+  padding: 0 50px;
+}
+
+#footer {
+  text-align: center;
+  position: fixed;
+  top: 720px;
+  width: 90%;
+  font-family: 'Saeada', cursive;
+}
+
+#txt{
+  width: 860px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Música de fundo enquanto a página é carregada (Caso não funcionar, clique no icone superior esquerdo) -->
+    <audio id="background-music" src="img/fund.mp3" autoplay loop></audio>
+
+    <div class="pokedex">
+        <!-- Nesta área é exibida o display de informacoes do Pokemon. (Nome, altura, peso, tipos, imagem e o som) -->
+        <div class="display">
+            <div id="pokemon-info">
+                <!-- Imagem do Pokémon -->
+                <img id="pokemon-image" src="" alt="">
+                <!-- Nome do Pokémon -->
+                <p id="pokemon-nome"></p>
+                <!-- Tipo do Pokémon -->
+                <p id="pokemon-tipos"></p>
+                <!-- Peso do Pokémon -->
+                <p id="pokemon-peso"></p>
+                <!-- Altura do Pokémon -->
+                <p id="pokemon-altura"></p>
+                <!-- Grito do Pokémon -->
+                <audio id="pokemon-som" src=""></audio>
+            </div>
+            <!-- Container para pesquisar o Pokémon por ID -->
+            <div class="search-container">
+                <!-- Caixa de pesquisa -->
+                <input type="number" id="pokemon-id" placeholder="Digite o ID do Pokémon">
+                <!-- Botão para iniciar a pesquisa -->
+                <button onclick="fetchPokemon()">Procurar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

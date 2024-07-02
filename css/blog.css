@@ -1,0 +1,70 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('/img/cinzas.webp'); /* Substitua 'background.jpg' pelo caminho real da sua imagem */
+        background-size: cover; /* Garante que a imagem de fundo cubra toda a área do corpo */
+        background-position: center; /* Centraliza a imagem de fundo */
+        background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
+        background-attachment: fixed; /* Fixa a imagem de fundo para que ela não role com a página */
+    }
+
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 50px; /* Ajuste o tamanho conforme desejado */
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-header h2 {
+    font-size: 28px;
+    color: #333333;
+}
+
+.post-info {
+    margin-bottom: 10px;
+}
+
+.post-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.post-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.post-content p {
+    line-height: 1.6;
+    color: #333333;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercicio 5 - Polygonizr</title>
+
+    <!-- Inclusão de arquivo de estilo CSS, biblioteca e fonte -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display-swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="polygonizr.js"></script>
+
+<body>
+    <!-- Corpo da página -->
+    <div id="site-landing"></div>
+    <!-- Script para inicializar e atualizar o Polygonizr -->
+    <script>
+        // Seleciona a div com o id "site-landing" e inicializa o Polygonizr
+        // com o tamanho da janela
+
+        let $sitelanding = $('#site-landing');
+        $sitelanding.polygonizr();
+        $(window).resize(function () {
+            $sitelanding.polygonizr("stop");
+            // Inicializa o Polygonizr com as novas dimensões da janela
+            $sitelanding.polygonizr({
+                canvasHeight: $(this).height(), canvasWidth: $(this).width()
+            });
+            $sitelanding.polygonizn("refresh");
+        });
+    </script>
+</body>

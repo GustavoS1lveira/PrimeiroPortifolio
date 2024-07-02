@@ -1,0 +1,69 @@
+body{
+    color: white;
+    background-color: #333;
+    figure { background-color:black;border: 1px solid #ccc;}
+    text-align:center;}
+body
+
+
+h1 {
+    border-width: 0.5px;  
+    border-style: solid; 
+    border-color:  white; 
+    color:rgb(255, 247, 0) ;
+    background-image: url(../img/63028f63-bcb7-43f1-8dbb-30e0feacf181-untitled.avif)
+    
+}
+
+h2 {    
+    color:white ;
+}
+
+p {
+    font-style: italic;
+    color:white ;
+}
+
+figcaption{
+    font-style: italic;
+}
+
+p:first-letter {
+    font-weight: bold;
+    color:rgb(255, 255, 255) ;
+}
+
+h1 + p {
+    text-indent: 0;
+}
+
+p:first-line{
+    font-variant: small-caps;
+
+}
+
+:not(p) + p:first-line { font-variant: small-caps; }
+
+/* Estilo básico para a barra de navegação no rodapé */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #657572; /* Cor de fundo da barra */
+    padding: 10px 0; /* Espaçamento interno */
+    text-align: center; /* Centralizar conteúdo */
+}
+
+/* Estilo dos botões */
+.footer-bar a {
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    margin: 0 10px; /* Espaçamento entre botões */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Efeito de hover nos botões */
+.footer-bar a:hover {
+    text-decoration: underline; /* Sublinhar no hover */
+}

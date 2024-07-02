@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="dist/cropme.css">
+    <title>Exercicio 6 - CropME</title>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        
+           
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                   
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="p-4">
+        <!-- Seção principal -->
+        <div class="container">
+            <!-- Container -->
+            <div class="description text-center">
+                <!-- Descrição -->
+                <h1 class="display-4">Cropme</h1>
+                <!-- Título -->
+                <p>Ferramenta feita para recortes de imagens, utilize para recortar. </p>
+                <!-- Descrição -->
+            </div>
+            <div class="row mt-5" id="app">
+                <div class="col-md-6">
+                    <div id="cropme"></div>
+                    <!-- Elemento de recorte -->
+                    <!-- Modais -->
+                    <!-- Modal Cropme resultado -->
+                    <!-- Modal Cropme Saída da Posição -->
+
+                    <div class="modal fade" id="cropmeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Cropme resultado</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img id="cropme-result" src="" alt="cropme">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="cropmePosition" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Cropme Saída da Posição</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <pre><code>{{ Posicao }}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Coluna -->
+                    <!-- Opções de configuração -->
+                    <!-- Tipo de Figura -->
+                    <!-- Transformar centro original -->
+                    <!-- Bordas -->
+                    <!-- Zoom -->
+                    <!-- Rotação -->
+                    <!-- Botões de ação -->
+                    <!-- Resetar -->
+                    <!-- Cortar -->
+                    <!-- Obter posição -->
+                    <div class="options">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="title">Tipo de Figura</div>
+                                <select class="form-control" v-model="options.viewport.type">
+                                    <option value="square">Quadrado (default)</option>
+                                    <option value="circle">Circulo</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="title">Transformar centro original</div>
+                                <select class="form-control" v-model="options.transformOrigin">
+                                    <option value="image">Imagem</option>
+                                    <option value="viewport">Janela (default)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="title">Bordas</div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                enable: <select class="form-control" v-model="options.viewport.border.enable">
+                                    <option :value="true">On (default)</option>
+                                    <option :value="false">Off</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Largura: <select class="form-control" v-model="options.viewport.border.width">
+                                    <option value="2">2 (default)</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Cor do Circulo: <select class="form-control" v-model="options.viewport.border.color">
+                                    <option value="#fff">Branco (default)</option>
+                                    <option value="#f00">Vermelho</option>
+                                    <option value="#00f">Azul</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="title">Zoom</div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Ativo: <select class="form-control" v-model="options.zoom.enable">
+                                    <option :value="true">On (default)</option>
+                                    <option :value="false">Off</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Roda do Mouse: <select class="form-control" v-model="options.zoom.mouseWheel">
+                                    <option :value="true">On (default)</option>
+                                    <option :value="false">Off</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Aplicar zoom: <select class="form-control" v-model="options.zoom.slider">
+                                    <option :value="true">On</option>
+                                    <option :value="false">Off (default)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="title">Rotação</div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Ativo: <select class="form-control" v-model="options.rotation.enable">
+                                    <option :value="true">On (default)</option>
+                                    <option :value="false">Off</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Rotacionar: <select class="form-control" v-model="options.rotation.slider">
+                                    <option :value="true">On</option>
+                                    <option :value="false">Off (default)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                Posicao: <select class="form-control" v-model="options.rotation.position">
+                                    <option value="left">Esquerda</option>
+                                    <option value="right">Direita (default)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-danger" @click="reset">Resetar </button>
+                        <button class="btn btn-outline-success float-right" @click="crop">Cortar</button>
+                        <button class="btn btn-outline-info float-right mr-3" @click="getPosition">Obter posição</button>
+                    </div>
+                </div>
+                <div class="mt-5 w-100 p-3 output">
+                    <pre><code>{{ options}}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Inclusão de bibliotecas JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="dist/cropme.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="calculadora">
+            <!-- Calculadora -->
+            <header>
+            </header>
+            <main class="conteudo__botoes">
+                <!-- Corpo principal com os botões -->
+                <!-- Input para exibir o resultado -->
+                <input type="text" placeholder="0" class="js-resultado" />
+
+                <!-- Botões iniciais -->
+                <a class="botoes__iniciais js-btn-ac">AC</a>
+                <a class="botoes__iniciais js-btn-del">DEL</a>
+                <a class="botoes__iniciais js-btn-mais-menos">+/-</a>
+
+                <!-- Botões padrões -->
+                <a class="js-btn-padroes" data-valor="/">÷</a>
+                <a class="js-btn-padroes" data-valor="7">7</a>
+                <a class="js-btn-padroes" data-valor="8">8</a>
+                <a class="js-btn-padroes" data-valor="9">9</a>
+                <a class="js-btn-padroes" data-valor="*">x</a>
+                <a class="js-btn-padroes" data-valor="4">4</a>
+                <a class="js-btn-padroes" data-valor="5">5</a>
+                <a class="js-btn-padroes" data-valor="6">6</a>
+                <a class="js-btn-padroes" data-valor="-">-</a>
+                <a class="js-btn-padroes" data-valor="1">1</a>
+                <a class="js-btn-padroes" data-valor="2">2</a>
+                <a class="js-btn-padroes" data-valor="3">3</a>
+                <a class="js-btn-padroes" data-valor="+">+</a>
+
+                <!-- Botão para o zero com classe especial -->
+                <a class="js-btn-padroes grid-span-2 borda-radius-esquerda" data-valor="0">0</a>
+                <!-- Botão para o ponto decimal -->
+                <a class="js-btn-padroes" data-valor=".">.</a>
+                <!-- Botão de igual -->
+                <a class="js-btn-igual borda-radius-direita">=</a>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

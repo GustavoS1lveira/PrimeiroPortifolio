@@ -1,0 +1,258 @@
+body { 
+    background-image: url("../img/imagem.jpg");
+    background-size: contain;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+}
+
+p{
+    height: 30px;
+}
+
+header {
+    position: relative;
+}
+
+.info.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.carrinho { 
+    background: url(../img/carrinho.png) no-repeat top right;
+    color: #ffffff;
+    font-size: 14px;
+    padding-right: 40px;
+    text-align: right;
+    width: 300px;
+    background-size: contain;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+}
+     
+.menu-opcoes ul {
+    font-size: 15px;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-opcoes ul li a {
+    color: rgb(255, 255, 255);
+}
+
+.menu-opcoes {
+    position: absolute;
+    top: 85px;
+    right: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 940px;
+}
+
+.busca, .menu-conteudo {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 250px;
+    float: left;
+}
+
+.busca h2, .busca form, .menu-conteudo h2 {
+    margin: 10px;
+}
+
+.menu-conteudo li {
+    background-color: white; 
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-conteudo a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.menu-conteudo { 
+    clear: left; 
+}
+
+.busca input {
+    vertical-align: middle;
+}
+
+.busca input[type=search] {
+    width: 170px;
+}
+
+.destaque { 
+    margin-top: 10px; 
+} 
+
+.menu-conteudo {
+    margin-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.painel { 
+    margin: 10px 0; 
+    padding: 10px; 
+    width: 30%; }
+
+.aula1 {
+     float: left; 
+     background-color: #ffffff; }
+
+.aula2 { 
+    float: right; 
+    background-color: #ffffff;}
+
+.painel li { 
+    display: inline-block; 
+    vertical-align: top; 
+    width: 140px; 
+    margin: 2px;
+    padding-bottom: 10px; }
+
+.painel h2 { 
+    font-size: 24px;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-bottom: 10px; }
+
+.painel a { 
+    color: #333; 
+    font-size: 14px; 
+    text-align: center; 
+    text-decoration: none; } 
+
+
+footer{
+    clear: both;
+    background-size: 50%;
+    padding: 20px 0;
+}
+
+footer .container{
+    margin-top: 485px;
+    clear: both;
+    padding-bottom: 100px;
+}
+
+.logoR{
+    height: 150x;
+    padding-left: 410px;
+}
+
+.social a{
+    height: 32px;
+    width: 32px;
+    display: block;
+    text-indent: -9999px;
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.social li {
+    float:left;
+    padding-left: 210px;
+}
+
+.social{
+    position: absolute;
+}
+
+.social a[href*="https://facebook.com/"]{
+    background-image: url(../img/facebook.png);
+    background-size: contain;
+
+}
+
+.social a[href*="https://instagram.com/"]{
+    background-image: url(../img/instagram.png);
+    background-size: contain;
+}
+
+.social a[href*="https://youtube.com/"]{
+    background-image: url(../img/youtube.png);
+    background-size: contain;
+
+}
+
+.destaque img{
+    width:auto;
+    height:auto;
+}
+
+.menu-opcoes a:hover {
+    color:#f9f9f9;
+}
+
+.menu-opcoes a:active {
+    color:#f9f9f9;
+}
+
+.menu-conteudo li ul {
+    display: none;
+   } 
+   .menu-conteudo li:hover ul {
+   display: block; 
+   } 
+   .menu-conteudo ul ul li {
+    background-color: #dcdcdc;
+    }
+
+    .menu-conteudo li li a:before {content: '- ';}
+
+    .painel { 
+        box-shadow: inset 1px 1px 4px #999;
+        border-radius: 10px; 
+        box-shadow: 1px 1px 4px #999; 
+    }
+
+.painel h2 {
+     text-shadow: 1px 3px 2px red; 
+     
+    }
+
+    .busca { 
+        border-top-left-radius: 4px; 
+        border-top-right-radius: 4px; 
+    }
+
+    .painel h2 { 
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.8); 
+    }
+
+    .aula1{
+        
+        background: linear-gradient(#f5dcdc, #bebef4);
+    }
+
+    .aula2{
+    background: linear-gradient(#dcdcf5, #f4bebe);
+}
+
+.painel li:hover { 
+    box-shadow: 0 0 5px #4a4949; 
+    transition: box-shadow 0.7s; 
+}
+
+.painel li:hover { 
+    background: linear-gradient(#dcdcf5, #f4bebe);
+     box-shadow: 0 0 5px #c2baba; transition: 0.7s; 
+    }
+    
+    .painel li:hover { 
+        transform: scale(1.1);
+    }
+
+    .painel li:hover { 
+        transform: scale(1.2) rotate(-3deg); 
+        }
