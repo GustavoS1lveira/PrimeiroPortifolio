@@ -1,3 +1,4 @@
+/* Define uma imagem de fundo para o corpo do documento */
 body { 
     background-image: url("../img/imagem.jpg");
     background-size: contain;
@@ -17,6 +18,7 @@ header {
     margin-left: auto;
 }
 
+/* Estiliza o carrinho de compras no canto superior direito */
 .carrinho { 
     background: url(../img/carrinho.png) no-repeat top right;
     color: #ffffff;
@@ -29,7 +31,8 @@ header {
     bottom: 80px;
     right: 0;
 }
-     
+ 
+/* Estiliza o menu de opções no canto superior direito */
 .menu-opcoes ul {
     font-size: 15px;
 }
@@ -49,11 +52,13 @@ header {
     right: 0;
 }
 
+/* Estiliza o layout dos contêineres e seus elementos */
 .container {
     margin: 0 auto;
     width: 940px;
 }
 
+/* Estiliza o menu de conteúdo e a busca */
 .busca, .menu-conteudo {
     background-color: #dcdcdc;
     font-weight: bold;
@@ -99,6 +104,7 @@ header {
     padding-bottom: 10px; 
 }
 
+/* Estiliza os painéis de conteúdo */
 .painel { 
     margin: 10px 0; 
     padding: 10px; 

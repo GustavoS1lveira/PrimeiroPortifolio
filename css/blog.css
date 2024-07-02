@@ -2,7 +2,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url('/img/cinzas.webp'); /* Substitua 'background.jpg' pelo caminho real da sua imagem */
+        background-image: url('./img/cinzas.webp'); /* Substitua 'background.jpg' pelo caminho real da sua imagem */
         background-size: cover; /* Garante que a imagem de fundo cubra toda a área do corpo */
         background-position: center; /* Centraliza a imagem de fundo */
         background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
