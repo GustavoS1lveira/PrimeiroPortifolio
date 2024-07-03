@@ -1,6 +1,6 @@
 [
-    {"nome": "João", "idade": 30, "cidade": "São Paulo"},
-    {"nome": "Maria", "idade": 25, "cidade": "Rio de Janeiro"},
-    {"nome": "Pedro", "idade": 35, "cidade": "Belo Horizonte"},
-    {"nome": "Ana", "idade": 28, "cidade": "Curitiba"}
+    {"nome": "Claudia", "idade": 30, "cidade": "São Paulo"},
+    {"nome": "Pietro", "idade": 25, "cidade": "Rio de Janeiro"},
+    {"nome": "Manuela", "idade": 35, "cidade": "Belo Horizonte"},
+    {"nome": "Vitor", "idade": 28, "cidade": "Curitiba"}
 ]
