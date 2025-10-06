@@ -1,4 +1,4 @@
-# Primeiro Portifolio 💻
+# Primeiro Portifólio 💻
 
 Durante o curso técnico de Desenvolvimento de Sistemas Fullstack no Senac RS, desenvolvi meu primeiro portfólio pessoal utilizando HTML, CSS e JavaScript. O projeto tinha como objetivo ser totalmente responsivo, além de incluir diversas atividades práticas que consolidaram o aprendizado das principais tecnologias web.
 
